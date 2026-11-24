@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Charlie Herman | Mechanical Engineering</title>
+  <meta name="description" content="Charlie Herman is a mechanical engineering student at Lehigh University with a minor in aerospace engineering, focused on manufacturing and aerospace design.">
+  <meta property="og:title" content="Charlie Herman | Mechanical Engineering">
+  <meta property="og:description" content="Projects in injection molding, structural analysis and mechanism design from a Lehigh mechanical engineering student.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <a class="monogram" href="#top" aria-label="Back to top">CH</a>
+    <nav aria-label="Sections">
+      <a href="#work">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="top">
+      <h1 class="name" aria-label="Charlie Herman">
+        <span class="line"><span>Charlie</span></span>
+        <span class="line"><span>Herman</span></span>
+      </h1>
+      <div class="intro">
+        <p class="lede">Mechanical engineering student at Lehigh University, minoring in aerospace. I like turning designs into real, physical products, from injection molds to aircraft structures.</p>
+        <p class="now"><span class="dot" aria-hidden="true"></span>Class of 2028, Bethlehem, PA</p>
+      </div>
+    </section>
+
+    <!-- ===================== PROJECTS ===================== -->
+    <section class="work" id="work" aria-labelledby="work-heading">
+      <h2 id="work-heading">Projects</h2>
+
+      <ol class="projects">
+        <!-- Project: Hot Wheels -->
+        <li>
+          <article class="project">
+            <div class="project-text">
+              <h3>Injection-molded Hot Wheels car</h3>
+              <p class="meta">Fall 2026, manufacturing course, in progress</p>
+              <p class="desc">Students at a local elementary school designed a Hot Wheels car, Thomas the Tank Engine, and our team is manufacturing it. I've worked on the CAD model, the mold layout and the Moldflow simulations that led us to redesign the runner system for balanced filling.</p>
+              <ul class="tags" aria-label="Tools used"><li>SolidWorks</li><li>Moldflow</li><li>Mastercam</li><li>CNC machining</li></ul>
+
+              <details class="process">
+                <summary>How we designed the mold</summary>
+                <ol class="steps">
+                  <li>
+                    <h4>CAD model</h4>
+                    <p>We started with a few basic designs to establish the overall shape, then developed a final design around our manufacturing constraints.</p>
+                  </li>
+                  <li>
+                    <h4>Design for manufacturing</h4>
+                    <p>The train needed uniform wall thickness so the plastic fills and cools evenly. Every feature had to be large enough to cut with our smallest tool, a 1/16 in end mill, and the finished car had to fit a standard Hot Wheels track.</p>
+                  </li>
+                  <li>
+                    <h4>Mold layout</h4>
+                    <p>The mold has two cavities for the halves of the train and a center cavity for the face. The face is molded separately because its detail risked undercuts that would stop it ejecting cleanly. We also laid out the ejector pins so each part pushes out without damage.</p>
+                  </li>
+                  <li>
+                    <h4>Moldflow simulation</h4>
+                    <p>Our first runner design produced large pressure differences between cavities, so some parts would fill much more easily than others. We redesigned it so one main runner branches into a cross, feeding each half of the train and continuing through the center to the face. Flow and pressure are now balanced across all three cavities.</p>
+                  </li>
+                  <li class="upcoming">
+                    <h4>Next: machining and molding</h4>
+                    <p>Program the mold plate toolpaths in Mastercam, machine the plates and start producing cars.</p>
+                  </li>
+                </ol>
+              </details>
+            </div>
+            <!-- ADD A PHOTO: put an image in the images folder and uncomment this
+            <figure class="project-figure">
+              <img src="images/hot-wheels-mold.jpg" alt="Mold layout for the Thomas the Tank Engine car" loading="lazy">
+            </figure>
+            -->
+          </article>
+        </li>
+
+        <!-- Project: Balsa wing -->
+        <li>
+          <article class="project">
+            <div class="project-text">
+              <h3>Balsa wood wing</h3>
+              <p class="meta">Fall 2026, group project, in progress</p>
+              <p class="desc">Our group modeled several wing designs in SolidWorks and used finite element analysis to compare them and choose the best one. Next we're laser cutting the parts from balsa wood and building the wing.</p>
+              <ul class="tags" aria-label="Tools used"><li>SolidWorks</li><li>FEA</li><li>Laser cutting</li></ul>
+            </div>
+            <!-- ADD A PHOTO: e.g. an FEA stress plot
+            <figure class="project-figure">
+              <img src="images/balsa-wing-fea.jpg" alt="FEA stress plot of the final wing design" loading="lazy">
+            </figure>
+            -->
+          </article>
+        </li>
+
+        <!-- Project: Quick-return -->
+        <li>
+          <article class="project has-figure">
+            <div class="project-text">
+              <h3>Quick-return mechanism analysis</h3>
+              <p class="meta">Fall 2026, Dynamics (ME 252), individual</p>
+              <p class="desc">Full kinematic analysis of a six-bar quick-return linkage, the mechanism used in shapers and power saws. I solved it three ways: hand-drawn velocity and acceleration polygons, closed-form vector-loop equations, and a modular MATLAB program sweeping three parameter sets. The analytical and MATLAB results agreed to six significant figures, and I traced the graphical error back to two link lengths measured from the drawing.</p>
+              <ul class="tags" aria-label="Tools used"><li>MATLAB</li><li>Kinematics</li><li>Google Sheets</li></ul>
+              <p class="more"><a href="files/Quick_Return_Mechanism_Report.pdf">Read the report (PDF)</a></p>
+            </div>
+            <figure class="project-figure">
+              <img src="images/quick-return-linkage.jpg" alt="Diagram of the six-bar quick-return linkage with the crank at 30 degrees" loading="lazy" width="880" height="892">
+              <figcaption>Linkage at θ₂ = 30°: time ratio 1.710, stroke 52.0 mm</figcaption>
+            </figure>
+          </article>
+        </li>
+
+        <!-- Project: Stirling -->
+        <li>
+          <article class="project has-figure">
+            <div class="project-text">
+              <h3>Stirling engine experiment</h3>
+              <p class="meta">Spring 2026, Thermodynamics (ME 104), team of three</p>
+              <p class="desc">We measured how a Stirling engine's speed changes with hot-side temperature. An Arduino and infrared sensor read a reflective strip on the flywheel, and a Python script logged RPM every second. From 50&nbsp;°C to 65&nbsp;°C, speed rose from 169 to 262 RPM, almost exactly in proportion to the temperature difference.</p>
+              <ul class="tags" aria-label="Tools used"><li>Arduino</li><li>Python</li><li>Data analysis</li></ul>
+              <p class="more"><a href="files/Stirling_Engine_Report.pdf">Read the report (PDF)</a></p>
+            </div>
+            <figure class="project-figure">
+              <img src="images/stirling-engine.jpg" alt="Stirling engine on a hot-water container with an infrared sensor on a breadboard" loading="lazy" width="900" height="1458">
+              <figcaption>The engine with our infrared RPM sensor</figcaption>
+            </figure>
+          </article>
+        </li>
+      </ol>
+
+      <!-- EDIT: add or remove smaller projects here -->
+      <div class="earlier">
+        <h3>Earlier projects</h3>
+        <p>An injection-molded LEGO-compatible block and a range of smaller CAD and 3D-printing builds.</p>
+      </div>
+    </section>
+
+    <!-- ===================== EXPERIENCE ===================== -->
+    <section class="experience" id="experience" aria-labelledby="experience-heading">
+      <h2 id="experience-heading">Experience</h2>
+      <ol class="roles">
+        <li>
+          <h3>Lehigh University Rocketry Association</h3>
+          <p class="meta">Fluids team, October 2026 to present</p>
+          <p>Cold flow testing a combustion chamber and analyzing pressure and flow data to validate the feed system and injectors ahead of hot fire. Helping design a load cell to measure the rocket's thrust.</p>
+        </li>
+        <li>
+          <h3>Sherwin-Williams, Baltimore</h3>
+          <p class="meta">Mechanical engineering co-op, May to August 2026</p>
+          <p>Led a changeover improvement project, using changeover data to rewrite SOPs. Drew plant equipment in AutoCAD and worked with controls, network and contractor teams to resolve equipment issues.</p>
+        </li>
+        <li>
+          <h3>Johnston Construction Company, Dover, PA</h3>
+          <p class="meta">Mechanical engineering intern, May to August 2025</p>
+          <p>Produced design-build drawings for water treatment plants, wastewater plants and pump stations for bid submissions, and built an annotation template that standardized drafting across teams.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section class="about" id="about" aria-labelledby="about-heading">
+      <h2 id="about-heading">About</h2>
+      <div class="about-body">
+        <p>I've been building things since I was a kid, starting with LEGO sets and moving on to bigger projects. I always knew I wanted to be an engineer.</p>
+        <p>At Lehigh I'm most drawn to aerospace and manufacturing: the point where a design has to become a real product that works and helps people. Outside class I compete as the number one singles player on the club tennis team.</p>
+      </div>
+      <dl class="facts">
+        <div><dt>Studying</dt><dd>B.S. Mechanical Engineering, minor in Aerospace Engineering, Lehigh University, 2028</dd></div>
+        <div><dt>CAD and manufacturing</dt><dd>SolidWorks, AutoCAD, Mastercam, Moldflow, injection molding, 3D printing</dd></div>
+        <div><dt>Analysis</dt><dd>Finite element analysis, MATLAB, LabVIEW, Excel</dd></div>
+        <div><dt>Certifications</dt><dd>SolidWorks CSWA, OSHA 10</dd></div>
+      </dl>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section class="contact" id="contact" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact</h2>
+      <p>I'm looking for aerospace and manufacturing internships and co-ops. Email is the best way to reach me.</p>
+      <a class="email" href="mailto:cjherman16@gmail.com">cjherman16@gmail.com</a>
+      <ul class="elsewhere" aria-label="More links">
+        <!-- EDIT: replace with your LinkedIn profile address -->
+        <li><a href="https://www.linkedin.com/in/your-linkedin-id">LinkedIn</a></li>
+        <li><a href="files/Charlie_Herman_Resume.pdf">Résumé (PDF)</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year">2026</span> Charlie Herman</p>
+    <a href="#top">Back to top</a>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
