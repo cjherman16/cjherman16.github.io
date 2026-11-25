@@ -261,6 +261,63 @@ main > section:not(.hero) > h2 {
 }
 
 .work > h2 { grid-row: span 2; }
+
+.status {
+  display: inline-block;
+  margin: 0 0 .75rem;
+  padding: .1rem .7rem;
+  border-radius: 999px;
+  background: var(--marigold);
+  font-family: var(--display);
+  font-size: .85rem;
+  font-weight: 600;
+}
+
+.project .process { grid-column: 1 / -1; max-width: 46rem; margin-top: 0; }
+
+.step-figure { margin: 1rem 0 0; }
+.step-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  background: #fff;
+}
+.step-figure figcaption {
+  margin-top: .45rem;
+  font-family: var(--display);
+  font-size: .85rem;
+  color: var(--muted);
+}
+.compare { display: grid; gap: .5rem; }
+
+/* Sherwin-Williams results */
+.results {
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem 2rem;
+}
+.results div { border-top: 2px solid var(--ink); padding-top: .75rem; }
+.results dt {
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: clamp(1.9rem, 3.6vw, 2.8rem);
+  letter-spacing: -.04em;
+  line-height: 1;
+}
+.results dd { margin: .45rem 0 0; color: var(--muted); font-size: 1rem; line-height: 1.45; }
+
+.findings {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 1rem;
+  max-width: 40rem;
+}
+.findings strong { font-family: var(--display); font-weight: 600; }
 .work > .earlier { grid-column: 2; }
 
 .earlier {
@@ -358,5 +415,6 @@ main > section:not(.hero) > h2 {
   .contact > h2 { grid-row: auto; }
   .intro { justify-self: start; margin-right: 0; }
   .project.has-figure { grid-template-columns: 1fr; }
+  .results { grid-template-columns: 1fr; gap: 1rem; }
   .work > .projects, .work > .earlier { grid-column: 1; }
 }

@@ -46,44 +46,84 @@
       <ol class="projects">
         <!-- Project: Hot Wheels -->
         <li>
+          <article class="project has-figure">
+            <div class="project-text">
+              <p class="status">In progress</p>
+              <h3>Injection-molded Hot Wheels car</h3>
+              <p class="meta">Fall 2026, Manufacturing (ME 240), team project</p>
+              <p class="desc">Students at a local elementary school designed a Hot Wheels car, Thomas the Tank Engine, and our team is manufacturing it. I worked on the CAD model, the mold layout and the Moldflow simulations that led us to redesign the runner system for balanced filling. The mold plate toolpaths are programmed, and next we machine the plates and mold the cars.</p>
+              <ul class="tags" aria-label="Tools used"><li>SolidWorks</li><li>Moldflow</li><li>Mastercam</li><li>CNC machining</li></ul>
+            </div>
+            <figure class="project-figure">
+              <img src="images/hot-wheels-thomas-render.jpg" alt="Rendered CAD model of the Thomas the Tank Engine car with wheels" loading="lazy" width="716" height="521">
+              <figcaption>Final CAD model, sized to run on a standard Hot Wheels track</figcaption>
+            </figure>
+
+            <details class="process">
+              <summary>How we designed the mold</summary>
+              <ol class="steps">
+                <li>
+                  <h4>CAD model</h4>
+                  <p>We started with a few basic designs to establish the overall shape, then developed a final design around our manufacturing constraints.</p>
+                </li>
+                <li>
+                  <h4>Design for manufacturing</h4>
+                  <p>The train needed uniform wall thickness so the plastic fills and cools evenly. Every feature had to be large enough to cut with our smallest tool, a 1/16 in end mill, and the finished car had to fit a standard Hot Wheels track.</p>
+                </li>
+                <li>
+                  <h4>Mold layout</h4>
+                  <p>The mold has two cavities for the halves of the train and a center cavity for the face. The face is molded separately because its detail risked undercuts that would stop it ejecting cleanly. We laid out 15 ejector pins so each part pushes out without damage.</p>
+                  <figure class="step-figure">
+                    <img src="images/hot-wheels-mold-plates.jpg" alt="The two mold plates side by side, showing the train-half cavities, the face cavity in the center and the runner" loading="lazy" width="1200" height="447">
+                    <figcaption>The two mold plates, with the face cavity in the center</figcaption>
+                  </figure>
+                </li>
+                <li>
+                  <h4>Moldflow simulation</h4>
+                  <p>Our first runner design left large pressure differences between cavities: the face needed about 21 to 23 MPa to fill, while the train halves filled at 11 to 15 MPa. We redesigned it so one main runner branches into a cross, feeding each half of the train and continuing through the center to the face. Peak pressure dropped from 29.7 to 27.9 MPa, and pressure at the face fell from about 22 to 15 MPa, much closer to the train halves.</p>
+                  <div class="compare">
+                    <figure class="step-figure">
+                      <img src="images/moldflow-before.jpg" alt="Moldflow pressure plot of the first runner design, with the face cavity at about 21 to 23 MPa" loading="lazy" width="1100" height="445">
+                      <figcaption>Before: first runner design</figcaption>
+                    </figure>
+                    <figure class="step-figure">
+                      <img src="images/moldflow-after.jpg" alt="Moldflow pressure plot of the redesigned cross runner, with the face cavity at about 15 MPa" loading="lazy" width="1100" height="440">
+                      <figcaption>After: cross runner through the center</figcaption>
+                    </figure>
+                  </div>
+                </li>
+                <li>
+                  <h4>Toolpaths</h4>
+                  <p>We programmed the toolpaths for both mold plates in Mastercam.</p>
+                </li>
+                <li class="upcoming">
+                  <h4>Next: machining and molding</h4>
+                  <p>Machine the plates on the CNC mill and start producing cars.</p>
+                </li>
+              </ol>
+            </details>
+          </article>
+        </li>
+
+        <!-- Project: Sherwin-Williams -->
+        <li>
           <article class="project">
             <div class="project-text">
-              <h3>Injection-molded Hot Wheels car</h3>
-              <p class="meta">Fall 2026, manufacturing course, in progress</p>
-              <p class="desc">Students at a local elementary school designed a Hot Wheels car, Thomas the Tank Engine, and our team is manufacturing it. I've worked on the CAD model, the mold layout and the Moldflow simulations that led us to redesign the runner system for balanced filling.</p>
-              <ul class="tags" aria-label="Tools used"><li>SolidWorks</li><li>Moldflow</li><li>Mastercam</li><li>CNC machining</li></ul>
-
-              <details class="process">
-                <summary>How we designed the mold</summary>
-                <ol class="steps">
-                  <li>
-                    <h4>CAD model</h4>
-                    <p>We started with a few basic designs to establish the overall shape, then developed a final design around our manufacturing constraints.</p>
-                  </li>
-                  <li>
-                    <h4>Design for manufacturing</h4>
-                    <p>The train needed uniform wall thickness so the plastic fills and cools evenly. Every feature had to be large enough to cut with our smallest tool, a 1/16 in end mill, and the finished car had to fit a standard Hot Wheels track.</p>
-                  </li>
-                  <li>
-                    <h4>Mold layout</h4>
-                    <p>The mold has two cavities for the halves of the train and a center cavity for the face. The face is molded separately because its detail risked undercuts that would stop it ejecting cleanly. We also laid out the ejector pins so each part pushes out without damage.</p>
-                  </li>
-                  <li>
-                    <h4>Moldflow simulation</h4>
-                    <p>Our first runner design produced large pressure differences between cavities, so some parts would fill much more easily than others. We redesigned it so one main runner branches into a cross, feeding each half of the train and continuing through the center to the face. Flow and pressure are now balanced across all three cavities.</p>
-                  </li>
-                  <li class="upcoming">
-                    <h4>Next: machining and molding</h4>
-                    <p>Program the mold plate toolpaths in Mastercam, machine the plates and start producing cars.</p>
-                  </li>
-                </ol>
-              </details>
+              <h3>Cutting changeover time and paint waste at Sherwin-Williams</h3>
+              <p class="meta">Summer 2026, co-op project, Baltimore plant</p>
+              <p class="desc">I ran a kaizen project on Line 1, a paint filling line, to shorten changeovers between batches and reduce yield loss. I timed every step of more than 30 changeovers, mapped the process, and worked with operators to fix what the data showed.</p>
             </div>
-            <!-- ADD A PHOTO: put an image in the images folder and uncomment this
-            <figure class="project-figure">
-              <img src="images/hot-wheels-mold.jpg" alt="Mold layout for the Thomas the Tank Engine car" loading="lazy">
-            </figure>
-            -->
+            <dl class="results">
+              <div><dt>30+</dt><dd>changeovers tracked and timed step by step</dd></div>
+              <div><dt>2.3 min</dt><dd>of avoidable time found in each changeover</dd></div>
+              <div><dt>2,559 gal</dt><dd>of paint saved this year from the filler-level fix</dd></div>
+            </dl>
+            <ul class="findings">
+              <li><strong>Task order.</strong> Operators were changing labels, cleaning filler heads and zeroing scales while time-critical steps waited. I rewrote the SOP so independent tasks happen during downtime and the critical path comes first.</li>
+              <li><strong>Filler level.</strong> The filler averaged 152.7 mm after runout against a 140 mm target, wasting about 3 gallons per order, and it was filled and drained more than once in 9 of 17 changeovers. New SOP steps fixed both.</li>
+              <li><strong>Measurement.</strong> Before trusting the yield numbers I checked the scales against each other (within 0.024 lb) and had the tank load cells recalibrated. I also brought the can top-off from a 13.8 g average to 33.5 g against a 39.7 g target, with less variation.</li>
+              <li><strong>Next step.</strong> I proposed testing filler speeds in 5 CPM steps to find the fastest drain, since draining takes about three minutes per changeover.</li>
+            </ul>
           </article>
         </li>
 
@@ -91,8 +131,9 @@
         <li>
           <article class="project has-figure">
             <div class="project-text">
+              <p class="status">In progress</p>
               <h3>Forward-swept balsa wing</h3>
-              <p class="meta">Fall 2026, Aeroelasticity (MECH 305), team of three, in progress</p>
+              <p class="meta">Fall 2026, Aeroelasticity (MECH 305), team of three</p>
               <p class="desc">We're designing a lightweight balsa wing with 30° forward sweep that resists twisting under lift. After FEA benchmarks of solid straight and swept wings, each of us designed an internal structure in SolidWorks. The team chose my box-spar design: a closed box centered on the quarter chord with six ribs. At 17.99&nbsp;g it was the lightest option (the solid wing weighed 88&nbsp;g), its shear center sits on the load line so lift causes almost no twist, and peak stress stayed at 1.8&nbsp;MPa against balsa's 4.7&nbsp;MPa limit. Next we laser cut the parts and build it.</p>
               <ul class="tags" aria-label="Tools used"><li>SolidWorks</li><li>FEA</li><li>Laser cutting</li></ul>
             </div>
@@ -152,7 +193,7 @@
         <li>
           <h3>Sherwin-Williams, Baltimore</h3>
           <p class="meta">Mechanical engineering co-op, May to August 2026</p>
-          <p>Led a changeover improvement project, using changeover data to rewrite SOPs. Drew plant equipment in AutoCAD and worked with controls, network and contractor teams to resolve equipment issues.</p>
+          <p>Led a changeover and yield-loss project on a paint filling line (see Projects), using changeover data to rewrite SOPs. Drew plant equipment in AutoCAD and worked with controls, network and contractor teams to resolve equipment issues.</p>
         </li>
         <li>
           <h3>Johnston Construction Company, Dover, PA</h3>

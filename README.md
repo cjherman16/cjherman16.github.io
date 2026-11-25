@@ -13,7 +13,7 @@ To change something later, open the file on GitHub, click the pencil icon, edit 
 
 ## Things to finish
 
-- **Photo for the Hot Wheels car:** save images (a CAD render, Moldflow result or FEA plot) in `images/`, then uncomment the `<figure>` block under each project and set the file name.
+
 
 ## Files
 
