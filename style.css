@@ -291,6 +291,8 @@ main > section:not(.hero) > h2 {
   color: var(--muted);
 }
 .compare { display: grid; gap: .5rem; }
+.compare.pair { grid-template-columns: 1fr 1fr; gap: 1rem; }
+.compare.pair img { aspect-ratio: 4 / 3; object-fit: cover; }
 
 /* Sherwin-Williams results */
 .results {
@@ -416,5 +418,6 @@ main > section:not(.hero) > h2 {
   .intro { justify-self: start; margin-right: 0; }
   .project.has-figure { grid-template-columns: 1fr; }
   .results { grid-template-columns: 1fr; gap: 1rem; }
+  .compare.pair { grid-template-columns: 1fr; }
   .work > .projects, .work > .earlier { grid-column: 1; }
 }
