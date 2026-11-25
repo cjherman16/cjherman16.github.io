@@ -260,7 +260,6 @@ main > section:not(.hero) > h2 {
   .process[open] .steps { animation: fade .35s ease; }
 }
 
-.work > h2 { grid-row: span 2; }
 
 .status {
   display: inline-block;
@@ -320,15 +319,7 @@ main > section:not(.hero) > h2 {
   max-width: 40rem;
 }
 .findings strong { font-family: var(--display); font-weight: 600; }
-.work > .earlier { grid-column: 2; }
 
-.earlier {
-  border-top: 1px solid var(--rule);
-  padding-top: 2rem;
-  max-width: var(--measure);
-}
-.earlier h3 { font-size: 1.25rem; font-weight: 600; }
-.earlier p { margin: .4rem 0 0; }
 
 /* ---------- Experience ---------- */
 .roles { list-style: none; margin: 0; padding: 0; display: grid; gap: 2.25rem; }
@@ -419,5 +410,5 @@ main > section:not(.hero) > h2 {
   .project.has-figure { grid-template-columns: 1fr; }
   .results { grid-template-columns: 1fr; gap: 1rem; }
   .compare.pair { grid-template-columns: 1fr; }
-  .work > .projects, .work > .earlier { grid-column: 1; }
+  .work > .projects { grid-column: 1; }
 }
